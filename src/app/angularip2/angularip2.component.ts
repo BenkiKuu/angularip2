@@ -6,11 +6,13 @@ import { Angularip2Service } from '../angularip2.service'
   styleUrls: ['./angularip2.component.css']
 })
 export class Angularip2Component implements OnInit {
+  angularip2: any[];
 
   constructor(private angularip2Service: Angularip2Service) {
 this.angularip2Service.profileInfo().subscribe(angularip2 => {
   console.log(angularip2);
-})
+  this.angularip2 = angularip2;
+});
   }
 
   ngOnInit() {
