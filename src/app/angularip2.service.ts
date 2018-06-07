@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
-import { map } from 'rxjs/add/operator/map';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class Angularip2Service {
@@ -15,6 +15,7 @@ export class Angularip2Service {
 
    profileInfo(){
      return this.my_http.get("https://api.github.com/users/" + this.username + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret)
-     .map(res => res.json());
+     response = (res => res.json());
+     .map(response)
    }
 }
