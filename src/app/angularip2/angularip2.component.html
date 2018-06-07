@@ -1,3 +1,26 @@
-<p>
-  angularip2 works!
-</p>
+<div *ngIf="angularip2">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      {{angularip2.name}} <small>({{angularip2.login}})</small>
+      <span *ngIf="angularip2.company">, Works at {{angularip2.company}}</span>
+      {{angularip2.location}}
+    </div>
+    <div class="panl-body">
+      <div class="row">
+        <div class="col-md-3">
+          <img src="{{angularip2.avatar_url}}" class="img-circle img-responsive" alt="Profile Pic">
+        </div>
+        <div class="col-md-5">
+          <ul class="list-group">
+            <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
+            <li class="list-group-item" *ngIf="profile.hireable">Available for hire</li>
+            <li class="list-group-item" *ngIf="profile.blog">{{profile.blog}}</li>
+            <li class="list-group-item" *ngIf="profile.email">{{profile.email}}</li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
