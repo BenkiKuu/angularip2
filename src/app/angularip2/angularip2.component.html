@@ -5,7 +5,7 @@
       <span *ngIf="angularip2.company">, Works at {{angularip2.company}}</span>
       {{angularip2.location}}
     </div>
-    <div class="panl-body">
+    <div class="panel-body">
       <div class="row">
         <div class="col-md-3">
           <img src="{{angularip2.avatar_url}}" class="img-circle img-responsive" alt="Profile Pic">
@@ -24,9 +24,19 @@
             <span class="label label-default">{{angularip2.followers}} Followers</span>
             <span class="label label-default">Following {{angularip2.following}}</span>
             <span class="label label-default">{{angularip2.public_gist}} Public Gist</span>
-            <span class="label label-default">{{angularip2.public_reps}} Public Repos</span>
+            <span class="label label-default">{{angularip2.public_repos}} Public Repos</span>
           </p>
           <p><a href="{{angularip2.html_url}}" target="_blank" class="btn btn-success">View profile on github</a></p>
+          <div class="panel panel-default">
+            <div class="panel panel-heading">
+              <h3 class="panel-title">Repos</h3>
+            </div>
+            <div class="panel-body" ngFor="let repo of repos">
+              <p>
+
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
