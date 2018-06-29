@@ -14,7 +14,7 @@ import { Angularip2Component } from './angularip2/angularip2.component';
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
     FormsModule
   ],
   providers: [Angularip2Service],
