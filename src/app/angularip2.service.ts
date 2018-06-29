@@ -10,7 +10,7 @@ export class Angularip2Service {
 
   constructor(private my_http:Http) {
     console.log("service is now ready!");
-    this.username = 'kirandash';
+    this.username = 'BenkiKuu';
    }
 
    profileInfo(){
@@ -21,5 +21,9 @@ export class Angularip2Service {
    profileRepos(){
      return this.my_http.get("https://api.github.com/users"+ this.username + "/repos?client_id=" + this.clientid + "&client_secret=" + this.clientsecret)
      .pipe(map(res => res.json()));
+   }
+
+   updateProfile(username:string){
+     this.username = username;
    }
 }
