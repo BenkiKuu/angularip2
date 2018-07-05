@@ -1,4 +1,4 @@
-# Github Finder
+# Github Search
 
 This is the second Independent project for Moringa Core Angular, June 1st, 2018.
 The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
